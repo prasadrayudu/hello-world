@@ -4,8 +4,8 @@ node('master') {
 		}
 		stage('build Maven') {
 		def mavenHome = tool name: 'Maven', type: 'maven'
-			def mvncmd = "${mavenHome}/bin/mvn"
-			// sh "${mvnCmd} clean package"
-			bat label: '', script: '''${mvncmd} clean package'''
+		def mvncmd = "${mavenHome}/bin/mvn"
+	        sh "${mvncmd} clean package"
+		//	bat label: '', script: '''${mvncmd} clean package'''
 		}
 }
