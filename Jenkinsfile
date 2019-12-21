@@ -6,8 +6,6 @@ node('master') {
 		def mavenHome = tool name: 'Maven', type: 'maven'
 		def mvncmd = "${mavenHome}/bin/mvn"
 //	        bat "${mvncmd} clean package"
-			bat label: '', script: '''${mvncmd} clean package
-'''
-		//	bat label: '', script: '''${mvncmd} clean package'''
+	        bat "${mvncmd} clean package"
 		}
 }
