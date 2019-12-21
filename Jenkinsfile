@@ -3,7 +3,7 @@ node('master') {
 		git credentialsId: 'git-credentials', url: 'https://github.com/prasadrayudu/hello-world.git'
 		}
 		stage('build Maven') {
-		sh 'mvn clean package'
+		//
 		
 		}
 }
